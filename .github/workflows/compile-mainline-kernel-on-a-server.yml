@@ -156,7 +156,7 @@ jobs:
           echo "status=success" >> ${GITHUB_OUTPUT}
 
       - name: Compile the kernel [ ${{ inputs.kernel_version }} ]
-        uses: ophub/amlogic-s9xxx-armbian@main
+        uses: linai081795/amlogic-s9xxx-armbian@main
         if: ${{ steps.mapped.outputs.status }} == 'success' && !cancelled()
         with:
           build_target: kernel
@@ -169,6 +169,8 @@ jobs:
           kernel_toolchain: ${{ inputs.kernel_toolchain }}
           compress_format: ${{ inputs.compress_format }}
           silent_log: ${{ inputs.silent_log }}
+          kernel_config: kernel-config/release
+          kernel_patch: kernel-patch/beta
           auto_patch: true
 
       - name: Upload Kernel to Release
