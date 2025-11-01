@@ -17,7 +17,7 @@ on:
         type: choice
         options:
           - unifreq/linux-5.10.y-rk35xx
-          - unifreq/linux-6.1.y-rockchip
+          - linai081795/linux-6.1.y-rockchip
           - codesnas/linux-5.10.y-rk35xx
           - codesnas/linux-6.1.y-rockchip
           - armbian/linux-rockchip@rk-6.1-rkr5.1
